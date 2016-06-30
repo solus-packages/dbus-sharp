@@ -1,0 +1,20 @@
+name       : dbus-sharp 
+version    : 0.8.1
+release    : 1
+source     :
+    - https://github.com/mono/dbus-sharp/archive/v0.8.1.tar.gz : 531011702c544fd8861751668b95ade8cf1aa2254838c934a02c3b4367b92b63
+license    : GPL-2.0
+summary    : dbus-sharp
+description: |
+        Dbus-sharp is a Mono/.NET binding to the D-Bus is a message bus system
+component  : programming
+builddeps  :
+    - pkgconfig(mono-nunit)
+setup      : |
+        ln -s /usr/bin/mcs /usr/bin/gmcs
+        ./autogen.sh
+        %configure
+build      : |
+    %make
+install    : |
+    %make_install
