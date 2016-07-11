@@ -2,15 +2,29 @@
     <Source>
         <Name>dbus-sharp</Name>
         <Packager>
-            <Name>_dje</Name>
-            <Email>underscoredje@free.fr</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Packager>
-        <License>GPL-2.0</License>
-        <Summary xml:lang="en">dbus-sharp</Summary>
+        <License>MIT</License>
+        <PartOf>programming</PartOf>
+        <Summary xml:lang="en">Dbus-sharp is a Mono/.NET binding to the D-Bus is a message bus system</Summary>
         <Description xml:lang="en">Dbus-sharp is a Mono/.NET binding to the D-Bus is a message bus system
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
     </Source>
+    <Package>
+        <Name>dbus-sharp</Name>
+        <Summary xml:lang="en">Dbus-sharp is a Mono/.NET binding to the D-Bus is a message bus system</Summary>
+        <Description xml:lang="en">Dbus-sharp is a Mono/.NET binding to the D-Bus is a message bus system
+</Description>
+        <PartOf>programming</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/mono/dbus-sharp-2.0/dbus-sharp.dll</Path>
+            <Path fileType="library">/usr/lib64/mono/gac/dbus-sharp/2.0.0.0__5675b0c3093115b5/dbus-sharp.dll</Path>
+            <Path fileType="library">/usr/lib64/mono/gac/dbus-sharp/2.0.0.0__5675b0c3093115b5/dbus-sharp.dll.config</Path>
+            <Path fileType="library">/usr/lib64/mono/gac/dbus-sharp/2.0.0.0__5675b0c3093115b5/dbus-sharp.dll.mdb</Path>
+        </Files>
+    </Package>
     <Package>
         <Name>dbus-sharp-devel</Name>
         <Summary xml:lang="en">Development files for dbus-sharp</Summary>
@@ -18,28 +32,19 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="current">dbus-sharp</Dependency>
+            <Dependency release="2">dbus-sharp</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/lib64/pkgconfig</Path>
-        </Files>
-    </Package>
-    <Package>
-        <Name>dbus-sharp</Name>
-        <Summary xml:lang="en">dbus-sharp</Summary>
-        <Description xml:lang="en">Dbus-sharp is a Mono/.NET binding to the D-Bus is a message bus system
-</Description>
-        <Files>
-            <Path fileType="library">/usr/lib64/mono</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/*.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2016-06-30</Date>
+        <Update release="2">
+            <Date>2016-07-11</Date>
             <Version>0.8.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>_dje</Name>
-            <Email>underscoredje@free.fr</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Update>
     </History>
 </PISI>
